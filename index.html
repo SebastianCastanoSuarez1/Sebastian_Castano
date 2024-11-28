@@ -362,8 +362,19 @@
 
         // Capturar datos del formulario
         const form = event.target;
+        const fromName = form.name.value; // Captura el nombre del remitente
+        const toName = "Sebastián Castaño"; // Este es el nombre del destinatario, cambia esto si es dinámico.
+        const message = form.message.value; // Captura el mensaje
 
-        emailjs.sendForm(serviceID, templateID, form).then(
+        // Crear un objeto con los datos a enviar
+        const templateParams = {
+          from_name: fromName,
+          to_name: toName, // Si deseas personalizar este campo, puedes usar el nombre del destinatario
+          message: message,
+        };
+
+        // Enviar el formulario con EmailJS
+        emailjs.send(serviceID, templateID, templateParams).then(
           () => {
             alert("Mensaje enviado correctamente.");
             form.reset(); // Limpiar el formulario
