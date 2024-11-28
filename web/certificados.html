@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Certificados</title>
+    <link rel="stylesheet" href="certificados.css" />
+  </head>
+  <body>
+    <!-- Encabezado -->
+    <header>
+      <div class="header-container">
+        <h1>Sebastián Castaño Suárez</h1>
+        <nav>
+          <ul>
+            <li><a href="../index.html">CV</a></li>
+            <li><a href="certificados.html">Certificados</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li>
+              <a href="https://github.com/SebastianCastanoSuarez1">GitHub</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Sección de certificados -->
+    <section class="certificates-section" id="certificates">
+      <h2>Certificados Informáticos</h2>
+      <div class="certificates-container">
+        <div class="certificate-item">
+          <img
+            src="../resources/images/DAM_1.jpg"
+            alt="Dam"
+            class="certificate-image"
+            onclick="openModal(this)"
+          />
+          <h3>Titulo de Desarrollo de aplicaciones multiplataforma</h3>
+          <p>
+            Capacitado en crear software adaptable a diversas plataformas,
+            dominando lenguajes de programación, diseño de interfaces y gestión
+            de proyectos.
+          </p>
+        </div>
+
+        <div class="certificate-item">
+          <img
+            src="../resources/images/web.png"
+            alt="Web"
+            class="certificate-image"
+            onclick="openModal(this)"
+          />
+          <h3>Certificado en web</h3>
+          <p>
+            Otorgado por Udemy, conocimientos para crear una web a base de HTML
+            y CSS.
+          </p>
+        </div>
+        <div class="certificate-item">
+          <img
+            src="../resources/images/bigdata.png"
+            alt="BigData"
+            class="certificate-image"
+            onclick="openModal(this)"
+          />
+          <h3>Certificado en bigdata</h3>
+          <p>
+            Certificación de bigdata para el analisis de datos, aplicar
+            conceptos estadisticos y la visualizacion de datos.
+          </p>
+        </div>
+      </div>
+    </section>
+    <section class="certificates-section" id="certificates">
+      <h2>Certificados</h2>
+      <div class="certificates-container">
+        <div class="certificate-item">
+          <img
+            src="../resources/images/bachillerato_1.jpg"
+            alt="Bachillerato"
+            class="certificate-image"
+            onclick="openModal(this)"
+          />
+          <h3>Titulo de bachillerato</h3>
+          <p>
+            Certificación de AWS para el manejo de infraestructura en la nube y
+            automatización.
+          </p>
+        </div>
+        <div class="certificate-item">
+          <img
+            src="../resources/images/B2.jpeg"
+            alt="B2"
+            class="certificate-image"
+            onclick="openModal(this)"
+          />
+          <h3>LanguageCert B2</h3>
+          <p>
+            He obtenido el certificado LanguageCert B2, el cual acredita mi capacidad para comunicarme en inglés de manera fluida y efectiva en entornos académicos y profesionales.
+          </p>
+        </div>
+        <div class="certificate-item">
+          <img
+            src="../resources/images/Voluntariado_1.jpg"
+            alt="Voluntariado"
+            class="certificate-image"
+            onclick="openModal(this)"
+          />
+          <h3>Voluntariado en Adopta un abuelo</h3>
+          <p>
+            Certificación de AWS para el manejo de infraestructura en la nube y
+            automatización.
+          </p>
+        </div>
+      </div>
+    </div>
+    </section>
+    <!-- Modal -->
+    <div id="imageModal" class="modal">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <img class="modal-content" id="modalImage" />
+    </div>
+
+    <!-- Pie de página -->
+    <footer>
+      <div class="footer-container">
+        <p>© Sebastián Castaño Suárez 2024</p>
+        <p>
+          Madrid, España |
+          <a href="mailto:castanosuarezsebastian@gmail.com"
+            >castanosuarezsebastian@gmail.com</a
+          >
+          | +34 655 784 630
+        </p>
+        <div class="footer-links">
+          <a
+            href="https://www.linkedin.com/in/sebastian-casta%C3%B1o-suarez-1257a42b3/"
+            target="_blank"
+            >LinkedIn</a
+          >
+          |
+          <a href="https://github.com/SebastianCastanoSuarez1" target="_blank"
+            >GitHub</a
+          >
+          |
+          <a href="../resources/Sebastian_Castaño_Suarez.pdf" target="_blank"
+            >Curriculum</a
+          >
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Abrir modal
+      function openModal(image) {
+        const modal = document.getElementById("imageModal");
+        const modalImg = document.getElementById("modalImage");
+        modal.style.display = "block";
+        modalImg.src = image.src;
+      }
+
+      // Cerrar modal
+      function closeModal() {
+        const modal = document.getElementById("imageModal");
+        modal.style.display = "none";
+      }
+    </script>
+  </body>
+</html>

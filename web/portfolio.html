@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio - Sebastián Castaño Suárez</title>
+    <link rel="stylesheet" href="portfolio.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="header-container">
+        <h1>Sebastián Castaño Suárez</h1>
+        <nav>
+          <ul>
+            <li><a href="../index.html">CV</a></li>
+            <li><a href="certificados.html">Certificados</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li>
+              <a href="https://github.com/SebastianCastanoSuarez1">GitHub</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+      <section class="portfolio-section">
+        <h2>Mi Portafolio</h2>
+
+        <!-- Buscador -->
+        <div class="search-container">
+          <input
+            type="text"
+            id="search-input"
+            placeholder="Buscar en la página..."
+          />
+          <button onclick="buscarPalabra()">Buscar</button>
+          <p id="search-feedback"></p>
+        </div>
+
+        <!-- Item del Portafolio -->
+        <div class="portfolio-item">
+          <div class="video-container">
+            <video controls>
+              <source src="../resources/videos/TFG.mp4" type="video/mp4" />
+              Tu navegador no soporta el elemento de video.
+            </video>
+          </div>
+          <div class="portfolio-details">
+            <h3>TFG: Administración de hospital</h3>
+            <p>
+              Este proyecto trata de tres aplicaciones, una de Administración,
+              una para los médicos y otra para los pacientes, con el objetivo de
+              facilitar las funciones necesarias.
+            </p>
+            <p>
+              <strong>Herramientas:</strong> Java, Maven, MongoDB, Swing y
+              Jaspersoft
+            </p>
+            <a
+              href="https://github.com/SebastianCastanoSuarez1/administraciontfg.git"
+              target="_blank"
+              class="github-link"
+              >Administración</a
+            >
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a
+              href="https://github.com/SebastianCastanoSuarez1/AplicacionMedicos.git"
+              target="_blank"
+              class="github-link"
+              >Médicos</a
+            >
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a
+              href="https://github.com/rcdavilin/AplicacionMedicoTFGNuevo.git"
+              target="_blank"
+              class="github-link"
+              >Pacientes</a
+            >
+          </div>
+        </div>
+
+        <!-- Otro Item del Portafolio -->
+        <div class="portfolio-item">
+          <div class="video-container">
+            <video controls>
+              <source
+                src="../resources/videos/kotlin_video.mp4"
+                type="video/mp4"
+              />
+              Tu navegador no soporta el elemento de video.
+            </video>
+          </div>
+          <div class="portfolio-details">
+            <h3>Desarrollo Móvil Inmersivo</h3>
+            <p>
+              Una aplicación de Android utilizando Jetpack Compose y otras
+              herramientas de desarrollo de Android. Demuestra cómo mostrar una
+              lista de elementos, manejar eventos de usuario y crear una
+              interfaz de usuario atractiva.
+            </p>
+            <p><strong>Herramientas:</strong> Kotlin Jetpack Compose UI</p>
+            <a
+              href="https://github.com/SebastianCastanoSuarez1/10Days_proyecto"
+              target="_blank"
+              class="github-link"
+              >App</a
+            >
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <div class="footer-container">
+        <p>© Sebastián Castaño Suárez 2024</p>
+        <p>
+          Madrid, España |
+          <a href="mailto:castanosuarezsebastian@gmail.com"
+            >castanosuarezsebastian@gmail.com</a
+          >
+          | +34 655 784 630
+        </p>
+        <div class="footer-links">
+          <a
+            href="https://www.linkedin.com/in/sebastian-casta%C3%B1o-suarez-1257a42b3/"
+            target="_blank"
+            >LinkedIn</a
+          >
+          |
+          <a href="https://github.com/SebastianCastanoSuarez1" target="_blank"
+            >GitHub</a
+          >
+          |
+          <a href="../resources/Sebastian_Castaño_Suarez.pdf" target="_blank"
+            >Curriculum</a
+          >
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      function buscarPalabra() {
+        const input = document
+          .getElementById("search-input")
+          .value.toLowerCase();
+        const elements = document.querySelectorAll(".portfolio-section *");
+        const feedback = document.getElementById("search-feedback");
+        let found = false;
+
+        // Eliminar resaltados previos
+        elements.forEach((el) => {
+          el.innerHTML = el.innerHTML.replace(
+            /<mark style="background-color: yellow;">(.*?)<\/mark>/g,
+            "$1"
+          );
+        });
+
+        if (input.trim() === "") {
+          feedback.textContent = "Por favor, escribe una palabra para buscar.";
+          return;
+        }
+
+        // Buscar y resaltar la palabra
+        for (let el of elements) {
+          if (el.textContent.toLowerCase().includes(input)) {
+            el.innerHTML = el.innerHTML.replace(
+              new RegExp(`(${input})`, "gi"),
+              `<mark style="background-color: yellow;">$1</mark>`
+            );
+
+            if (!found) {
+              el.scrollIntoView({ behavior: "smooth", block: "center" });
+              found = true;
+            }
+          }
+        }
+
+        // Retroalimentación
+        feedback.textContent = found
+          ? `Se encontró la primera coincidencia para "${input}".`
+          : `No se encontraron coincidencias para "${input}".`;
+      }
+    </script>
+  </body>
+</html>

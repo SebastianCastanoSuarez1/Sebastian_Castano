@@ -1,0 +1,267 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #333;
+  color: #fff;
+}
+
+/* Header */
+header {
+  background-color: #444;
+  padding: 20px 0;
+  border-bottom: 3px solid #ff9800;
+}
+
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+header h1 {
+  font-size: 2em;
+  color: #ff9800;
+}
+
+header nav ul li a {
+  color: #ff9800;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  text-decoration: none;
+  color: #fff;
+  padding: 10px 15px;
+  transition: background-color 0.3s, color 0.3s;
+  border-radius: 5px;
+}
+
+nav a:hover {
+  background-color: #ff9800;
+  color: #444;
+}
+
+/* Footer */
+footer {
+  background-color: #444;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  border-top: 3px solid #ff9800;
+  font-size: 0.9em;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-container p {
+  margin: 5px 0;
+}
+
+.footer-links a {
+  color: #ff9800;
+  text-decoration: none;
+  margin: 0 5px;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #e68a00;
+}
+
+/* Portfolio Section */
+.portfolio-section {
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.portfolio-section h2 {
+  text-align: center;
+  color: #ff9800;
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.portfolio-item {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 40px;
+  background-color: #444;
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid #ff9800;
+}
+
+.portfolio-details h3 {
+  font-size: 1.5em;
+  color: #ff9800;
+  margin-bottom: 10px;
+}
+
+.portfolio-details p {
+  margin: 5px 0;
+}
+
+.github-link {
+  color: #ff9800;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.github-link:hover {
+  color: #fff;
+}
+
+/* Video Container */
+.video-container {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%; /* Relación de aspecto 16:9 */
+  background: #000;
+  overflow: hidden;
+  border-radius: 5px;
+}
+
+.video-container video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background: #000;
+}
+
+/* Search Bar */
+.search-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.search-container input {
+  padding: 10px;
+  font-size: 1em;
+  border-radius: 5px;
+  border: 1px solid #ff9800;
+}
+
+.search-container button {
+  padding: 10px 15px;
+  background-color: #ff9800;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.search-container button:hover {
+  background-color: #e68a00;
+}
+
+#search-feedback {
+  color: #ff9800;
+  font-size: 0.9em;
+  margin-top: 10px;
+  text-align: center;
+}
+
+/* Media Queries */
+
+/* Tablets y pantallas medianas (1024px y menores) */
+@media (max-width: 1024px) {
+  .header-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .portfolio-item {
+    padding: 15px;
+  }
+
+  .search-container {
+    flex-direction: column;
+    gap: 5px;
+  }
+}
+
+/* Teléfonos móviles (768px y menores) */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 1.5em;
+  }
+
+  nav a {
+    font-size: 0.9em;
+    padding: 8px 12px;
+  }
+
+  .portfolio-section h2 {
+    font-size: 1.8em;
+  }
+
+  .portfolio-item {
+    padding: 10px;
+  }
+
+  .search-container input {
+    width: 90%;
+  }
+
+  .video-container {
+    padding-top: 75%; /* Cambia a relación de aspecto 4:3 para pantallas pequeñas */
+  }
+}
+
+/* Pantallas muy pequeñas (480px y menores) */
+@media (max-width: 480px) {
+  header {
+    padding: 10px 0;
+  }
+
+  nav a {
+    font-size: 0.8em;
+    padding: 6px 10px;
+  }
+
+  .portfolio-item {
+    padding: 8px;
+  }
+
+  .portfolio-section h2 {
+    font-size: 1.5em;
+  }
+
+  .search-container input {
+    padding: 8px;
+    font-size: 0.9em;
+  }
+
+  .search-container button {
+    font-size: 0.9em;
+  }
+}

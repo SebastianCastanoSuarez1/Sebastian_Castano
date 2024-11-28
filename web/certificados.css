@@ -1,0 +1,269 @@
+/* Elimina márgenes y paddings globales */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #444; /* Fondo oscuro */
+  color: #fff; /* Texto en blanco */
+}
+
+/* Asegura que todos los elementos respeten el box model */
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+/* Header container */
+header {
+  background-color: #444; /* Fondo oscuro */
+  padding: 20px 0;
+  border-bottom: 3px solid #ff9800; /* Línea naranja decorativa */
+}
+
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+/* Estilo del título */
+header h1 {
+  font-size: 2em;
+  color: #ff9800; /* Título en naranja */
+  font-family: "Arial", sans-serif;
+  margin: 0;
+}
+header nav ul li a {
+  color: #ff9800;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  text-decoration: none;
+  font-size: 1.1em;
+  color: #fff;
+  padding: 10px 15px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  border-radius: 5px;
+}
+
+nav a:hover {
+  background-color: #ff9800;
+  color: #444;
+}
+
+/* Perfil */
+.profile-container {
+  background-color: #444;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 15%;
+  padding: 20px;
+  justify-content: center;
+  border-top: 1px solid #ff9800;
+  border-bottom: 1px solid #ff9800;
+}
+
+.profile-image {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}
+
+/* Certificados */
+.certificates-section {
+  background-color: #444;
+  color: #fff;
+  padding: 40px 20px;
+  text-align: center;
+  border-top: 3px solid #ff9800;
+  border-bottom: 3px solid #ff9800;
+}
+
+.certificates-container {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.certificate-item {
+  text-align: center;
+  max-width: 300px;
+  background-color: #333;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.certificate-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.certificate-item h3 {
+  font-size: 1.5em;
+  color: #ff9800;
+  margin-bottom: 10px;
+}
+
+.certificate-item p {
+  font-size: 1em;
+  color: #fff;
+}
+/* Modal estilos */
+.modal {
+  display: none; /* Oculto por defecto */
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.modal-content {
+  display: block;
+  margin: 5% auto;
+  max-width: 80%;
+  border-radius: 10px;
+}
+
+.close {
+  position: absolute;
+  top: 20px;
+  right: 35px;
+  color: #fff;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.close:hover {
+  color: #ff9800;
+}
+
+/* Efecto hover en imágenes */
+.certificate-image {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.certificate-image:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+footer {
+  background-color: #444; /* Fondo oscuro */
+  color: #fff; /* Texto claro */
+  text-align: center;
+  padding: 20px;
+  border-top: 3px solid #ff9800; /* Línea decorativa naranja */
+  font-size: 0.9em;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-container p {
+  margin: 5px 0;
+}
+
+.footer-links a {
+  color: #ff9800; /* Color de los enlaces */
+  text-decoration: none;
+  margin: 0 5px;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #e68a00; /* Efecto hover */
+}
+
+/* Media Queries */
+
+/* Pantallas medianas (1024px y menores) */
+@media (max-width: 1024px) {
+  .header-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .profile-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .certificates-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* Pantallas pequeñas (768px y menores) */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 1.5em;
+  }
+
+  nav a {
+    font-size: 1em;
+    padding: 8px 12px;
+  }
+
+  .certificate-item {
+    max-width: 80%;
+  }
+}
+
+/* Pantallas muy pequeñas (480px y menores) */
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 1.2em;
+  }
+
+  .profile-image {
+    width: 150px;
+    height: 150px;
+  }
+
+  nav a {
+    font-size: 0.9em;
+  }
+
+  .certificate-item {
+    max-width: 90%;
+    padding: 15px;
+  }
+
+  .certificate-image {
+    width: 120px;
+    height: 120px;
+  }
+}
