@@ -348,12 +348,11 @@
     <!-- Incluye el SDK de EmailJS -->
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script>
-      // Inicializar EmailJS con tu User ID (lo obtienes en tu cuenta de EmailJS)
+      // Inicializar EmailJS con tu User ID
       (function () {
         emailjs.init("9-v-f9AZ8eniLDfQG"); // Reemplaza con tu User ID
       })();
     
-      // Función para enviar el formulario
       function sendEmail(event) {
         event.preventDefault(); // Evitar el envío tradicional del formulario
     
@@ -362,31 +361,32 @@
     
         // Capturar datos del formulario
         const form = event.target;
-        const fromName = form.name.value; // Captura el nombre del remitente
-        const toName = "Sebastián Castaño"; // Este es el nombre del destinatario
-        const message = form.message.value; // Captura el mensaje
-        const email = form.email.value; // Captura el email del remitente
+        const fromName = form.name.value; // Nombre del remitente
+        const fromEmail = form.email.value; // Email del remitente
+        const toName = "Sebastián Castaño"; // Nombre del destinatario
+        const message = form.message.value; // Contenido del mensaje
     
-        // Mostrar la vista previa del mensaje
+        // Datos a enviar al template
+        const templateParams = {
+          from_name: fromName,
+          from_email: fromEmail, // Aquí incluimos el correo del remitente
+          to_name: toName,
+          message: message,
+        };
+    
+        // Confirmación antes del envío
         const previewMessage = `
-          De: ${fromName} <${email}>
+          De: ${fromName} <${fromEmail}>
           Para: ${toName}
-          Mensaje: 
+          Mensaje:
           ${message}
         `;
         const confirmation = confirm(
           `Estás a punto de enviar el siguiente mensaje:\n\n${previewMessage}\n\n¿Quieres continuar?`
         );
     
-        // Si el usuario confirma, enviar el correo
+        // Enviar el correo si el usuario confirma
         if (confirmation) {
-          const templateParams = {
-            from_name: fromName,
-            to_name: toName,
-            message: message,
-            from_email: email, // Asegúrate de que este campo exista en tu plantilla de EmailJS
-          };
-    
           emailjs.send(serviceID, templateID, templateParams).then(
             () => {
               alert("Mensaje enviado correctamente.");
