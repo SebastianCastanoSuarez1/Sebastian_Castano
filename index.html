@@ -352,44 +352,59 @@
       (function () {
         emailjs.init("9-v-f9AZ8eniLDfQG"); // Reemplaza con tu User ID
       })();
-
+    
       // Función para enviar el formulario
       function sendEmail(event) {
         event.preventDefault(); // Evitar el envío tradicional del formulario
-
+    
         const serviceID = "service_r9o5m3k"; // Reemplaza con tu Service ID
         const templateID = "template_0rsy42u"; // Reemplaza con tu Template ID
-
+    
         // Capturar datos del formulario
         const form = event.target;
         const fromName = form.name.value; // Captura el nombre del remitente
-        const toName = "Sebastián Castaño"; // Este es el nombre del destinatario, cambia esto si es dinámico.
+        const toName = "Sebastián Castaño"; // Este es el nombre del destinatario
         const message = form.message.value; // Captura el mensaje
-
-        // Crear un objeto con los datos a enviar
-        const templateParams = {
-          from_name: fromName,
-          to_name: toName, // Si deseas personalizar este campo, puedes usar el nombre del destinatario
-          message: message,
-        };
-
-        // Enviar el formulario con EmailJS
-        emailjs.send(serviceID, templateID, templateParams).then(
-          () => {
-            alert("Mensaje enviado correctamente.");
-            form.reset(); // Limpiar el formulario
-          },
-          (error) => {
-            console.error("Error al enviar el mensaje:", error);
-            alert("Hubo un error al enviar el mensaje. Inténtalo de nuevo.");
-          }
+        const email = form.email.value; // Captura el email del remitente
+    
+        // Mostrar la vista previa del mensaje
+        const previewMessage = `
+          De: ${fromName} <${email}>
+          Para: ${toName}
+          Mensaje: 
+          ${message}
+        `;
+        const confirmation = confirm(
+          `Estás a punto de enviar el siguiente mensaje:\n\n${previewMessage}\n\n¿Quieres continuar?`
         );
+    
+        // Si el usuario confirma, enviar el correo
+        if (confirmation) {
+          const templateParams = {
+            from_name: fromName,
+            to_name: toName,
+            message: message,
+            from_email: email, // Asegúrate de que este campo exista en tu plantilla de EmailJS
+          };
+    
+          emailjs.send(serviceID, templateID, templateParams).then(
+            () => {
+              alert("Mensaje enviado correctamente.");
+              form.reset(); // Limpiar el formulario
+            },
+            (error) => {
+              console.error("Error al enviar el mensaje:", error);
+              alert("Hubo un error al enviar el mensaje. Inténtalo de nuevo.");
+            }
+          );
+        }
       }
-
+    
       // Asociar la función al evento submit del formulario
       document
         .querySelector("#contact-form")
         .addEventListener("submit", sendEmail);
     </script>
+    
   </body>
 </html>
