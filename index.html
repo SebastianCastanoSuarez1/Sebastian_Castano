@@ -97,9 +97,9 @@
       </section>
 
       <!-- Sección de Contacto -->
+      <!-- Sección de Contacto -->
       <section class="contact-section">
         <h2>Contacto</h2>
-
         <div class="contact-info">
           <div class="contact-item">
             <a
@@ -119,7 +119,6 @@
             <p>+34 655 784 630</p>
           </div>
         </div>
-
         <div class="contact-links">
           <button
             class="btn"
@@ -137,10 +136,9 @@
             <button class="btn">Ver CV</button>
           </a>
         </div>
-
         <div class="contact-buttons">
-          <button class="btn">Contactar</button>
-          <button class="btn">Conocer más sobre mí</button>
+          <!-- Aquí se agrega un enlace que va a la sección de Contáctame -->
+          <a href="#contact-form"><button class="btn">Contactar</button></a>
         </div>
       </section>
 
@@ -339,7 +337,7 @@
             >GitHub</a
           >
           |
-          <a href="/resources/Sebastian_Castaño_Suarez.pdf" target="_blank"
+          <a href="resources/pdf/Sebastian_Castaño_Suarez.pdf" target="_blank"
             >Curriculum</a
           >
         </div>
@@ -352,20 +350,20 @@
       (function () {
         emailjs.init("9-v-f9AZ8eniLDfQG"); // Reemplaza con tu User ID
       })();
-    
+
       function sendEmail(event) {
         event.preventDefault(); // Evitar el envío tradicional del formulario
-    
+
         const serviceID = "service_r9o5m3k"; // Reemplaza con tu Service ID
         const templateID = "template_0rsy42u"; // Reemplaza con tu Template ID
-    
+
         // Capturar datos del formulario
         const form = event.target;
         const fromName = form.name.value; // Nombre del remitente
         const fromEmail = form.email.value; // Email del remitente
         const toName = "Sebastián Castaño"; // Nombre del destinatario
         const message = form.message.value; // Contenido del mensaje
-    
+
         // Datos a enviar al template
         const templateParams = {
           from_name: fromName,
@@ -373,7 +371,7 @@
           to_name: toName,
           message: message,
         };
-    
+
         // Confirmación antes del envío
         const previewMessage = `
           De: ${fromName} <${fromEmail}>
@@ -384,7 +382,7 @@
         const confirmation = confirm(
           `Estás a punto de enviar el siguiente mensaje:\n\n${previewMessage}\n\n¿Quieres continuar?`
         );
-    
+
         // Enviar el correo si el usuario confirma
         if (confirmation) {
           emailjs.send(serviceID, templateID, templateParams).then(
@@ -399,12 +397,11 @@
           );
         }
       }
-    
+
       // Asociar la función al evento submit del formulario
       document
         .querySelector("#contact-form")
         .addEventListener("submit", sendEmail);
     </script>
-    
   </body>
 </html>
