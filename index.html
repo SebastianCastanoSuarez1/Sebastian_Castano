@@ -350,16 +350,35 @@
     <!-- Incluye el SDK de EmailJS -->
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script>
-      // Inicializar EmailJS con tu User ID
-      (function () {
-        emailjs.init("9-v-f9AZ8eniLDfQG"); // Reemplaza con tu User ID
-      })();
+      let emailConfig = {};
+
+      // Cargar configuración desde un archivo JSON
+      async function loadEmailConfig() {
+        try {
+          const response = await fetch("emailjs-config.json");
+          if (!response.ok) {
+            throw new Error(
+              `No se pudo cargar el archivo de configuración: ${response.status}`
+            );
+          }
+          emailConfig = await response.json();
+
+          // Inicializar EmailJS con el User ID del archivo de configuración
+          emailjs.init(emailConfig.userID);
+          console.log("EmailJS inicializado correctamente");
+        } catch (error) {
+          console.error("Error al cargar la configuración de EmailJS:", error);
+        }
+      }
+
+      // Llamar a la función para cargar la configuración
+      loadEmailConfig();
 
       function sendEmail(event) {
         event.preventDefault(); // Evitar el envío tradicional del formulario
 
-        const serviceID = "service_r9o5m3k"; // Reemplaza con tu Service ID
-        const templateID = "template_0rsy42u"; // Reemplaza con tu Template ID
+        const serviceID = emailConfig.serviceID; // Obtener Service ID del archivo
+        const templateID = emailConfig.templateID; // Obtener Template ID del archivo
 
         // Capturar datos del formulario
         const form = event.target;
@@ -371,18 +390,18 @@
         // Datos a enviar al template
         const templateParams = {
           from_name: fromName,
-          from_email: fromEmail, // Aquí incluimos el correo del remitente
+          from_email: fromEmail,
           to_name: toName,
           message: message,
         };
 
         // Confirmación antes del envío
         const previewMessage = `
-          De: ${fromName} <${fromEmail}>
-          Para: ${toName}
-          Mensaje:
-          ${message}
-        `;
+      De: ${fromName} <${fromEmail}>
+      Para: ${toName}
+      Mensaje:
+      ${message}
+    `;
         const confirmation = confirm(
           `Estás a punto de enviar el siguiente mensaje:\n\n${previewMessage}\n\n¿Quieres continuar?`
         );
