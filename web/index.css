@@ -1,8 +1,8 @@
 /* Header container */
 header {
-  background-color: #444; /* Fondo oscuro */
+  background-color: #f4f4f4; /* Fondo oscuro */
   padding: 20px 0;
-  border-bottom: 3px solid #ff9800; /* Línea naranja decorativa */
+  border-bottom: 3px solid #1e88e5; /* Línea naranja decorativa */
 }
 
 .header-container {
@@ -17,9 +17,13 @@ header {
 /* Estilo del título */
 header h1 {
   font-size: 2em;
-  color: #ff9800; /* Título en naranja */
+  color: #1e88e5; /* Título en naranja */
   font-family: "Arial", sans-serif;
   margin: 0;
+}
+
+header nav ul li a {
+  color: #1e88e5; /* Azul suave */
 }
 
 /* Navegación */
@@ -38,15 +42,15 @@ nav ul li {
 nav a {
   text-decoration: none;
   font-size: 1.1em;
-  color: #fff; /* Texto blanco */
+  color: #000000; /* Texto blanco */
   padding: 10px 15px;
   transition: background-color 0.3s ease, color 0.3s ease;
   border-radius: 5px;
 }
 
 nav a:hover {
-  background-color: #ff9800; /* Fondo naranja al pasar el mouse */
-  color: #444; /* Texto oscuro para contraste */
+  background-color: #1e88e5; /* Fondo naranja al pasar el mouse */
+  color: #f4f4f4; /* Texto oscuro para contraste */
 }
 
 body {
@@ -57,15 +61,15 @@ body {
 
 /* Estilo del contenedor de la imagen y el texto */
 .profile-container {
-  background-color: #444; /* Fondo de contacto */
-  color: #fff; /* Texto claro */
+  background-color: #f4f4f4; /* Fondo de contacto */
+  color: #000000; /* Texto claro */
   display: flex;
   align-items: center;
   gap: 15%; /* Espacio entre la imagen y el texto */
   padding: 20px;
   justify-content: center;
-  border-top: 1px solid #ff9800; /* Borde superior naranja */
-  border-bottom: 1px solid #ff9800; /* Borde inferior naranja */
+  border-top: 1px solid #1e88e5; /* Borde superior naranja */
+  border-bottom: 1px solid #1e88e5; /* Borde inferior naranja */
 }
 
 /* Imagen de perfil */
@@ -87,7 +91,7 @@ body {
 header h1 {
   text-align: center;
   margin-top: 20px;
-  color: #ff9800; /* Color de encabezado */
+  color: #1e88e5; /* Color de encabezado */
 }
 
 nav ul {
@@ -100,7 +104,7 @@ nav ul {
 
 nav a {
   text-decoration: none;
-  color: #ff9800; /* Color de los enlaces */
+  color: #1e88e5; /* Color de los enlaces */
 }
 
 ul {
@@ -110,24 +114,24 @@ ul {
 footer {
   text-align: center;
   padding: 10px;
-  background-color: #444; /* Fondo oscuro */
-  color: #fff; /* Texto claro */
+  background-color: #f4f4f4; /* Fondo oscuro */
+  color: #000000; /* Texto claro */
 }
 
 /* Sección de contacto */
 .contact-section {
-  background-color: #444;
-  color: #fff;
+  background-color: #f4f4f4;
+  color: #000000;
   padding: 40px 20px;
   text-align: center;
 
-  border-top: 1px solid #ff9800; /* Borde del color de contacto */
+  border-top: 1px solid #1e88e5; /* Borde del color de contacto */
 }
 
 .contact-section h2 {
   font-size: 2em;
   margin-bottom: 20px;
-  color: #ff9800;
+  color: #1e88e5;
 }
 
 /* Información de contacto */
@@ -146,7 +150,7 @@ footer {
   font-size: 2em;
   margin-bottom: 10px;
   display: block;
-  color: #ff9800;
+  color: #1e88e5;
   text-decoration: none;
 }
 
@@ -164,18 +168,18 @@ footer {
 
 .btn-link {
   text-decoration: none;
-  color: #ff9800;
+  color: #1e88e5;
   font-weight: bold;
   transition: color 0.3s ease;
 }
 
 .btn-link:hover {
-  color: #fff;
+  color: #000000;
 }
 
 .btn {
-  background-color: #ff9800;
-  color: #fff;
+  background-color: #1e88e5;
+  color: #000000;
   border: none;
   padding: 10px 20px;
   font-size: 1em;
@@ -196,17 +200,17 @@ footer {
 }
 /* Sección de habilidades */
 .skills-section {
-  background-color: #444; /* Fondo de contacto */
+  background-color: #f4f4f4; /* Fondo de contacto */
   padding: 20px;
-  color: #fff; /* Texto claro */
+  color: #000000; /* Texto claro */
 }
 
 .skills-container {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  border-top: 1px solid #ff9800; /* Borde del color de contacto */
-  border-bottom: 1px solid #ff9800;
+  border-top: 1px solid #1e88e5; /* Borde del color de contacto */
+  border-bottom: 1px solid #1e88e5;
   padding: 20px 0;
 }
 
@@ -222,7 +226,7 @@ footer {
 
 .skills h3 {
   font-size: 1.5em;
-  color: #ff9800; /* Encabezados en color de contacto */
+  color: #1e88e5; /* Encabezados en color de contacto */
   margin-bottom: 10px;
 }
 
@@ -239,22 +243,22 @@ footer {
 /* Divider */
 .divider {
   width: 5px;
-  background-color: #fff; /* Separador blanco */
+  background-color:#000000; /* Separador blanco */
   height: 100%;
 }
 
 /* Sección de software */
 .software-section {
-  background-color: #444; /* Fondo de contacto */
+  background-color: #f4f4f4; /* Fondo de contacto */
   padding: 40px;
   text-align: center;
-  color: #fff; /* Texto claro */
+  color: #000000; /* Texto claro */
 }
 
 .software-section h2 {
   font-size: 2em;
   margin-bottom: 20px;
-  color: #ff9800; /* Color de encabezado */
+  color: #1e88e5; /* Color de encabezado */
 }
 
 .software-container {
@@ -271,7 +275,7 @@ footer {
 .software-category h3 {
   font-size: 1.5em;
   margin-bottom: 15px;
-  border-bottom: 1px solid #ff9800; /* Línea inferior en color de contacto */
+  border-bottom: 1px solid #1e88e5; /* Línea inferior en color de contacto */
   padding-bottom: 5px;
 }
 
@@ -294,17 +298,17 @@ footer {
 
 /* Sección de experiencia laboral */
 .experience-section {
-  background-color: #444; /* Fondo de contacto */
+  background-color: #f4f4f4; /* Fondo de contacto */
   padding: 40px;
-  color: #fff; /* Texto claro */
+  color: #000000; /* Texto claro */
   text-align: center;
-  border-top: 1px solid #ff9800; /* Borde del color de contacto */
+  border-top: 1px solid #1e88e5; /* Borde del color de contacto */
 }
 
 .experience-section h2 {
   font-size: 2em;
   margin-bottom: 20px;
-  color: #ff9800; /* Color de encabezado */
+  color: #1e88e5; /* Color de encabezado */
 }
 
 .experience-container {
@@ -324,13 +328,13 @@ footer {
 .experience-text {
   max-width: 600px;
   text-align: left;
-  color: #fff; /* Texto claro */
+  color: #000000; /* Texto claro */
 }
 
 .experience-text h3 {
   font-size: 1.5em;
   margin-top: 0;
-  color: #ff9800; /* Color de encabezado */
+  color: #1e88e5; /* Color de encabezado */
 }
 
 .experience-text p {
@@ -347,7 +351,7 @@ footer {
 }
 
 .container {
-  background-color: #444; /* Fondo de contacto */
+  background-color: #f4f4f4; /* Fondo de contacto */
   display: flex;
   align-items: center;
 }
@@ -375,14 +379,14 @@ footer {
 .divider-orange {
   width: 100%;
   height: 5px;
-  background-color: #ff9800;
+  background-color: #1e88e5;
   margin: 20px 0;
 }
 
 /* H2 títulos */
 h2 {
   font-size: 2em;
-  color: #ff9800;
+  color: #1e88e5;
   text-align: center;
   margin-bottom: 20px;
 }
@@ -391,10 +395,10 @@ h2 {
 .languages-section {
   text-align: center;
   padding: 40px 20px; /* Más espacio en padding para mayor claridad */
-  background-color: #444;
-  color: #fff;
-  border-top: 3px solid #ff9800;
-  border-bottom: 3px solid #ff9800;
+  background-color:#f4f4f4;
+  color: #000000;
+  border-top: 3px solid #1e88e5;
+  border-bottom: 3px solid #1e88e5;
 }
 
 .languages-container {
@@ -414,20 +418,20 @@ h2 {
   width: 100px; /* Tamaño uniforme para las imágenes */
   height: 100px;
   border-radius: 50%;
-  border: 2px solid #fff; /* Borde blanco para destacarlas */
+  border: 2px solid #000000; /* Borde blanco para destacarlas */
 }
 
 .language-item p {
   margin-top: 10px;
   font-size: 14px;
-  color: #ff9800; /* Color consistente con el tema */
+  color: #1e88e5; /* Color consistente con el tema */
 }
 footer {
-  background-color: #444; /* Fondo oscuro */
-  color: #fff; /* Texto claro */
+  background-color: #f4f4f4; /* Fondo oscuro */
+  color: #000000; /* Texto claro */
   text-align: center;
   padding: 20px;
-  border-top: 3px solid #ff9800; /* Línea decorativa naranja */
+  border-top: 3px solid #1e88e5; /* Línea decorativa naranja */
   font-size: 0.9em;
 }
 
@@ -441,7 +445,7 @@ footer {
 }
 
 .footer-links a {
-  color: #ff9800; /* Color de los enlaces */
+  color: #1e88e5; /* Color de los enlaces */
   text-decoration: none;
   margin: 0 5px;
   transition: color 0.3s ease;
@@ -455,9 +459,9 @@ footer {
 
 /* Header container */
 header {
-  background-color: #444; /* Fondo oscuro */
+  background-color: #f4f4f4; /* Fondo oscuro */
   padding: 20px 0;
-  border-bottom: 3px solid #ff9800; /* Línea naranja decorativa */
+  border-bottom: 3px solid #1e88e5; /* Línea naranja decorativa */
 }
 
 .header-container {
@@ -472,7 +476,7 @@ header {
 /* Estilo del título */
 header h1 {
   font-size: 2em;
-  color: #ff9800; /* Título en naranja */
+  color: #1e88e5; /* Título en naranja */
   font-family: "Arial", sans-serif;
   margin: 0;
 }
@@ -493,15 +497,15 @@ nav ul li {
 nav a {
   text-decoration: none;
   font-size: 1.1em;
-  color: #fff; /* Texto blanco */
+  color: #000000; /* Texto blanco */
   padding: 10px 15px;
   transition: background-color 0.3s ease, color 0.3s ease;
   border-radius: 5px;
 }
 
 nav a:hover {
-  background-color: #ff9800; /* Fondo naranja al pasar el mouse */
-  color: #444; /* Texto oscuro para contraste */
+  background-color: #1e88e5; /* Fondo naranja al pasar el mouse */
+  color: #f4f4f4; /* Texto oscuro para contraste */
 }
 
 body {
@@ -511,17 +515,17 @@ body {
 }
 
 .contact-form-section {
-  background-color: #444;
-  color: #fff;
+  background-color: #f4f4f4;
+  color: #000000;
   padding: 40px 20px;
   text-align: center;
-  border-top: 3px solid #ff9800;
-  border-bottom: 3px solid #ff9800;
+  border-top: 3px solid #1e88e5;
+  border-bottom: 3px solid ;
 }
 
 .contact-form-section h2 {
   font-size: 2em;
-  color: #ff9800;
+  color: #1e88e5;
   margin-bottom: 20px;
 }
 
@@ -542,10 +546,10 @@ body {
 .form-group textarea {
   width: 100%;
   padding: 10px;
-  border: 1px solid #fff;
+  border: 1px solid #000000;
   border-radius: 5px;
-  background-color: #333;
-  color: #fff;
+  background-color: #f4f4f4;
+  color: #000000;
   font-size: 1em;
 }
 
@@ -557,12 +561,12 @@ body {
 .form-group input:focus,
 .form-group textarea:focus {
   outline: none;
-  border-color: #ff9800;
+  border-color: #1e88e5;
 }
 
 button[type="submit"] {
-  background-color: #ff9800;
-  color: #fff;
+  background-color: #1e88e5;
+  color: #000000;
   border: none;
   padding: 10px 20px;
   font-size: 1.1em;

@@ -3,15 +3,15 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #333;
-  color: #fff;
+  background-color: #f4f4f4; /* Blanco suave */
+  color: #000000; /* Texto negro */
 }
 
 /* Header */
 header {
-  background-color: #444;
+  background-color: #f4f4f4; /* Blanco suave */
   padding: 20px 0;
-  border-bottom: 3px solid #ff9800;
+  border-bottom: 3px solid #1e88e5; /* Azul suave */
 }
 
 .header-container {
@@ -25,11 +25,11 @@ header {
 
 header h1 {
   font-size: 2em;
-  color: #ff9800;
+  color: #1e88e5; /* Azul suave */
 }
 
 header nav ul li a {
-  color: #ff9800;
+  color: #1e88e5; /* Azul suave */
 }
 
 nav ul {
@@ -42,24 +42,24 @@ nav ul {
 
 nav a {
   text-decoration: none;
-  color: #fff;
+  color: #1e88e5; /* Azul suave */
   padding: 10px 15px;
   transition: background-color 0.3s, color 0.3s;
   border-radius: 5px;
 }
 
 nav a:hover {
-  background-color: #ff9800;
-  color: #444;
+  background-color: #1e88e5; /* Azul suave */
+  color: #f4f4f4; /* Blanco suave */
 }
 
 /* Footer */
 footer {
-  background-color: #444;
-  color: #fff;
+  background-color: #f4f4f4; /* Blanco suave */
+  color: #1e88e5; /* Azul suave */
   text-align: center;
   padding: 20px;
-  border-top: 3px solid #ff9800;
+  border-top: 3px solid #1e88e5; /* Azul suave */
   font-size: 0.9em;
 }
 
@@ -70,17 +70,18 @@ footer {
 
 .footer-container p {
   margin: 5px 0;
+  color: #1e88e5; /* Azul suave */
 }
 
 .footer-links a {
-  color: #ff9800;
+  color: #1e88e5; /* Azul suave */
   text-decoration: none;
   margin: 0 5px;
   transition: color 0.3s ease;
 }
 
 .footer-links a:hover {
-  color: #e68a00;
+  color: #1565c0; /* Azul oscuro */
 }
 
 /* Portfolio Section */
@@ -92,7 +93,7 @@ footer {
 
 .portfolio-section h2 {
   text-align: center;
-  color: #ff9800;
+  color: #1e88e5; /* Azul suave */
   font-size: 2em;
   margin-bottom: 20px;
 }
@@ -102,30 +103,32 @@ footer {
   flex-direction: column;
   gap: 15px;
   margin-bottom: 40px;
-  background-color: #444;
+  background-color: #ffffff; /* Blanco puro */
   padding: 20px;
   border-radius: 10px;
-  border: 1px solid #ff9800;
+  border: 1px solid #1e88e5; /* Azul suave */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .portfolio-details h3 {
   font-size: 1.5em;
-  color: #ff9800;
+  color: #1e88e5; /* Azul suave */
   margin-bottom: 10px;
 }
 
 .portfolio-details p {
   margin: 5px 0;
+  color: #000000; /* Negro */
 }
 
 .github-link {
-  color: #ff9800;
+  color: #1e88e5; /* Azul suave */
   text-decoration: none;
   font-weight: bold;
 }
 
 .github-link:hover {
-  color: #fff;
+  color: #1565c0; /* Azul oscuro */
 }
 
 /* Video Container */
@@ -133,7 +136,7 @@ footer {
   position: relative;
   width: 100%;
   padding-top: 56.25%; /* Relación de aspecto 16:9 */
-  background: #000;
+  background: #000000; /* Negro */
   overflow: hidden;
   border-radius: 5px;
 }
@@ -145,7 +148,7 @@ footer {
   width: 100%;
   height: 100%;
   object-fit: contain;
-  background: #000;
+  background: #000000; /* Negro */
 }
 
 /* Search Bar */
@@ -161,13 +164,14 @@ footer {
   padding: 10px;
   font-size: 1em;
   border-radius: 5px;
-  border: 1px solid #ff9800;
+  border: 1px solid #1e88e5; /* Azul suave */
+  color: #000000; /* Negro */
 }
 
 .search-container button {
   padding: 10px 15px;
-  background-color: #ff9800;
-  color: #fff;
+  background-color: #1e88e5; /* Azul suave */
+  color: #ffffff; /* Blanco puro */
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -175,11 +179,11 @@ footer {
 }
 
 .search-container button:hover {
-  background-color: #e68a00;
+  background-color: #1565c0; /* Azul oscuro */
 }
 
 #search-feedback {
-  color: #ff9800;
+  color: #1e88e5; /* Azul suave */
   font-size: 0.9em;
   margin-top: 10px;
   text-align: center;

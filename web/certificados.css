@@ -4,8 +4,8 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: #444; /* Fondo oscuro */
-  color: #fff; /* Texto en blanco */
+  background-color: #f4f4f4; /* Fondo blanco suave */
+  color: #000000; /* Texto negro */
 }
 
 /* Asegura que todos los elementos respeten el box model */
@@ -17,9 +17,9 @@ body {
 
 /* Header container */
 header {
-  background-color: #444; /* Fondo oscuro */
+  background-color: #f4f4f4; /* Fondo blanco suave */
   padding: 20px 0;
-  border-bottom: 3px solid #ff9800; /* Línea naranja decorativa */
+  border-bottom: 3px solid #1e88e5; /* Línea azul suave */
 }
 
 .header-container {
@@ -34,12 +34,13 @@ header {
 /* Estilo del título */
 header h1 {
   font-size: 2em;
-  color: #ff9800; /* Título en naranja */
+  color: #1e88e5; /* Título azul suave */
   font-family: "Arial", sans-serif;
   margin: 0;
 }
+
 header nav ul li a {
-  color: #ff9800;
+  color: #1e88e5; /* Azul suave */
 }
 
 nav ul {
@@ -53,28 +54,28 @@ nav ul {
 nav a {
   text-decoration: none;
   font-size: 1.1em;
-  color: #fff;
+  color: #1e88e5; /* Azul suave */
   padding: 10px 15px;
   transition: background-color 0.3s ease, color 0.3s ease;
   border-radius: 5px;
 }
 
 nav a:hover {
-  background-color: #ff9800;
-  color: #444;
+  background-color: #1e88e5; /* Azul suave */
+  color: #f4f4f4; /* Blanco suave */
 }
 
 /* Perfil */
 .profile-container {
-  background-color: #444;
-  color: #fff;
+  background-color: #f4f4f4; /* Fondo blanco suave */
+  color: #000000; /* Texto negro */
   display: flex;
   align-items: center;
   gap: 15%;
   padding: 20px;
   justify-content: center;
-  border-top: 1px solid #ff9800;
-  border-bottom: 1px solid #ff9800;
+  border-top: 1px solid #1e88e5; /* Azul suave */
+  border-bottom: 1px solid #1e88e5; /* Azul suave */
 }
 
 .profile-image {
@@ -85,12 +86,12 @@ nav a:hover {
 
 /* Certificados */
 .certificates-section {
-  background-color: #444;
-  color: #fff;
+  background-color: #f4f4f4; /* Fondo blanco suave */
+  color: #000000; /* Texto negro */
   padding: 40px 20px;
   text-align: center;
-  border-top: 3px solid #ff9800;
-  border-bottom: 3px solid #ff9800;
+  border-top: 3px solid #1e88e5; /* Azul suave */
+  border-bottom: 3px solid #1e88e5; /* Azul suave */
 }
 
 .certificates-container {
@@ -103,10 +104,10 @@ nav a:hover {
 .certificate-item {
   text-align: center;
   max-width: 300px;
-  background-color: #333;
+  background-color: #ffffff; /* Blanco puro */
   padding: 20px;
   border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .certificate-image {
@@ -118,14 +119,15 @@ nav a:hover {
 
 .certificate-item h3 {
   font-size: 1.5em;
-  color: #ff9800;
+  color: #1e88e5; /* Azul suave */
   margin-bottom: 10px;
 }
 
 .certificate-item p {
   font-size: 1em;
-  color: #fff;
+  color: #000000; /* Negro */
 }
+
 /* Modal estilos */
 .modal {
   display: none; /* Oculto por defecto */
@@ -150,7 +152,7 @@ nav a:hover {
   position: absolute;
   top: 20px;
   right: 35px;
-  color: #fff;
+  color: #000000; /* Negro */
   font-size: 40px;
   font-weight: bold;
   cursor: pointer;
@@ -158,7 +160,7 @@ nav a:hover {
 }
 
 .close:hover {
-  color: #ff9800;
+  color: #1e88e5; /* Azul suave */
 }
 
 /* Efecto hover en imágenes */
@@ -171,12 +173,13 @@ nav a:hover {
   transform: scale(1.05);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
 }
+
 footer {
-  background-color: #444; /* Fondo oscuro */
-  color: #fff; /* Texto claro */
+  background-color: #f4f4f4; /* Fondo blanco suave */
+  color: #1e88e5; /* Azul suave */
   text-align: center;
   padding: 20px;
-  border-top: 3px solid #ff9800; /* Línea decorativa naranja */
+  border-top: 3px solid #1e88e5; /* Línea azul suave */
   font-size: 0.9em;
 }
 
@@ -190,15 +193,16 @@ footer {
 }
 
 .footer-links a {
-  color: #ff9800; /* Color de los enlaces */
+  color: #1e88e5; /* Azul suave */
   text-decoration: none;
   margin: 0 5px;
   transition: color 0.3s ease;
 }
 
 .footer-links a:hover {
-  color: #e68a00; /* Efecto hover */
+  color: #1565c0; /* Azul oscuro */
 }
+
 
 /* Media Queries */
 
